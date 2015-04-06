@@ -1,4 +1,4 @@
-package es.unizar.tmdad.lab1.domain;
+package es.unizar.tmdad.lab2.domain;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,7 +1,9 @@
-package es.unizar.tmdad.lab1;
+package es.unizar.tmdad.lab2.configuration;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
+
+import es.unizar.tmdad.lab2.Application;
 
 public class ServletInitializer extends SpringBootServletInitializer {
 

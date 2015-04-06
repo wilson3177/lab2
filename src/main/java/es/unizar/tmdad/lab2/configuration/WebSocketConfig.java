@@ -1,4 +1,4 @@
-package es.unizar.tmdad.lab1;
+package es.unizar.tmdad.lab2.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

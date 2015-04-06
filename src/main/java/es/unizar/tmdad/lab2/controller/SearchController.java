@@ -1,10 +1,11 @@
-package es.unizar.tmdad.lab1.controller;
+package es.unizar.tmdad.lab2.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import es.unizar.tmdad.lab1.service.TwitterLookupService;
+
+import es.unizar.tmdad.lab2.service.TwitterLookupService;
 
 @Controller
 public class SearchController {

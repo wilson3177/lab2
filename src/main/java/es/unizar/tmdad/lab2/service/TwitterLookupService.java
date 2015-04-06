@@ -1,4 +1,4 @@
-package es.unizar.tmdad.lab1.service;
+package es.unizar.tmdad.lab2.service;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentMap;

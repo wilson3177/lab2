@@ -1,6 +1,7 @@
 package es.unizar.tmdad.lab2.service;
 
 import java.util.Arrays;
+import es.unizar.tmdad.lab2.domain.TargetedTweet;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,16 +43,11 @@ public class StreamSendingService {
 		stream = twitterTemplate.streamingOperations().filter(fsp, Arrays.asList(integrationStreamListener));		
 	}
 	
-	public void sendTweet(Tweet tweet) {
-		Map<String, Object> map = new HashMap<>();
-		map.put(MessageHeaders.CONTENT_TYPE, MimeTypeUtils.APPLICATION_JSON);
-		for(String s: lookupService.getQueries()) {
-			if (tweet.getText().contains(s)) {
-		ops.convertAndSend(
-				"/queue/search/"+s, tweet, map);
-			}
-		}
-	}
+	public void sendTweet(TargetedTweet targeted) {
+ 		Map<String, Object> map = new HashMap<>();
+ 		map.put(MessageHeaders.CONTENT_TYPE, MimeTypeUtils.APPLICATION_JSON);
+ 		ops.convertAndSend("/queue/search/"+ targeted.getFirstTarget(), targeted.getTweet(), map);
+ 	}
 
 	public Stream getStream() {
 		return stream;

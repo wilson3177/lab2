@@ -1,6 +1,7 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
  xmlns:th="http://www.thymeleaf.org">
+ 
 <head>
 <title>Cliente MVC Twitter</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -50,19 +51,23 @@ th:src="@{/webjars/jquery/2.1.3/jquery.min.js}"></script>
 
 
 </head>
+
+
 <body>
+
  <nav class="navbar navbar-default" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
    <p class="navbar-brand">Cliente MVC Twitter</p>
    <p class="navbar-text">Desarrollo de Aplicaciones Distribuidas
-    2014-2015</p>
+    2014-2015 Lab 2</p>
   </div>
   <div class="nav navbar-right">
    <a title="UNIZAR" href="http://www.unizar.es"><img height="50"
     th:src="@{/logoUZ.png}" src="../static/logoUZ.png" alt="" /></a>
   </div>
  </nav>
+ 
  <div class="container">
   <!-- Formulario principal -->
   <form id="search"  action="search" method="get">
